@@ -1,0 +1,181 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#container nav,
+#container section {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: -140px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header_wrapper {
+    opacity: 0.7;
+    background-color: #D2691E;
+    background-image: url("imatges/sweet-pastry-assortment-top-view.jpg");
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 200px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px 2px black;
+    color: white;
+    flex: 1 100%;
+}
+
+.header_content h1 {
+    font-size: 3em;
+    font-weight: bolder;
+    padding-bottom: 40px;
+    opacity: 1;
+    font-family: "Lucida Handwriting", cursive;
+}
+
+.header_content {
+    width: 80%;
+    padding: 0 100px;
+    opacity: 1;
+    animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+section {
+    padding: 30px;
+    flex: 1 100%;
+    order: 3;
+    box-shadow: 2px 2px 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+section:nth-child(odd) {
+    background-color: #FFDAB9; 
+}
+
+section:nth-child(even) {
+    background-color: #FFE4B5;
+}
+
+section h2 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #D2691E; 
+}
+
+section ul {
+    padding: 10px;
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#receptes img,
+#consells img {
+    display: block;
+    width: 100px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+section a {
+    text-decoration: none;
+}
+
+li > a,
+li > a {
+    color: white;
+}
+
+section li {
+    color: black;
+    text-decoration: none;
+    width: 100px;
+    text-align: center;
+    background-color: #D2691E;
+    border-radius: 20px;
+    padding: 20px 45px 10px;
+    margin: 5px;
+    box-shadow: 2px 2px 5px;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+section li:hover {
+    background-color: #CD853F; 
+    box-shadow: 0 0 0;
+}
+
+.imatges_galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.imatges_galeria img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    transition: transform 0.6s ease-in-out;
+}
+
+.imatges_galeria img:hover {
+    transform: scale(4);
+    z-index: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+input[type="file"] {
+    flex: 0.5;
+    padding: 20px 15px;
+    border-style: dashed;
+}
+
+form button#penjar {
+    padding: 5px 10px;
+    margin: 20px 20px 20px 50px;
+    background-color: #A0522D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px black;
+}
+
+form button#penjar:hover {
+    background-color: #D2691E; 
+    box-shadow: 0 0 0;
+}
+
