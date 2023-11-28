@@ -1,0 +1,161 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+#menu {
+    text-align: center;
+    font-weight: bolder;
+    background-color: rgba(0, 0, 0, 0);
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: -100px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    flex: 1 100%;
+    order: 2;
+}
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+#menu li {
+    display: inline-block;
+    background-color: #7d1935;
+    margin: 5px 2px;
+    box-shadow: 2px 2px 5px;
+}
+
+#menu a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    padding: 8px 20px;
+    color: white;
+    font-weight: bolder;
+}
+
+#menu li:hover {
+    background-color: #af6f3c;
+    box-shadow: 0 0 0;
+}
+
+#menu li:nth-child(3) {
+    background-color: #d9a768; 
+    box-shadow: 0 0 0;
+}
+
+.sidebar {
+    display: none;
+}
+
+.toggle-button {
+    display: none;
+}
+
+.close-button{
+    display: none;
+}
+
+@media (max-width: 1000px) {
+
+    .toggle-button {
+        display: inline-block;
+        position: fixed;
+        top: 8px;
+        left: 0;
+        z-index: 2;
+    }
+
+    .close-button {
+        display: inline-block;
+        position: fixed;
+        top: 8px;
+        left: 200px;
+        padding: 10px;
+        z-index: 2;
+    }
+
+    .close-button:hover {
+        opacity: 0.5;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        display: block;
+        height: 100%;
+        width: 250px;
+        background-color: #9e7250; 
+        overflow-x: hidden;
+        transition: 0.5s;
+        transform: translateX(-5px);
+        z-index: 1;
+    }
+
+    #menu .sidebar ul {
+        list-style-type: none;
+        margin-top: 80px;
+    }
+
+    #menu .sidebar li {
+        display: block;
+        margin: 20px;
+    }
+
+    .button {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        background-color: #f0d9bd;
+        margin-left: 10px;
+        border-radius: 10px;
+        opacity: 0.8;
+        box-shadow: 2px 2px 5px black;
+    }
+
+    .toggle-button .bar {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: black;
+        margin-top: 3px;
+        border-radius: 10px;
+    }
+
+    #menu .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    #menu .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #menu ul li {
+        text-align: center;
+    }
+
+    #menu ul li a {
+        padding: 10px 20px;
+    }
+
+    section {
+        margin-top: 20px;
+    }
+
+    .search input[type=text] {
+        width: 180px;
+        height: 38px;
+    }
+
+    .search button {
+        padding: 5px 10px;
+        margin-top: 10px;
+    }
+}
