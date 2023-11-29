@@ -1,3 +1,4 @@
+/*El contingut de main*/
 * {
     padding: 0;
     margin: 0;
@@ -18,10 +19,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* El header on conté el títol i la petita descripció */
 .header_wrapper {
     opacity: 0.7;
     background-color: #D2691E;
-    background-image: url("imatges/sweet-pastry-assortment-top-view.jpg");
+    background-image: url("/main/images/sweet-pastry-assortment-top-view.jpg");
     position: relative;
     width: 100%;
     background-size: cover;
@@ -50,6 +52,7 @@
     animation: fade-in 1s ease-in-out;
 }
 
+/*Animació del header per a que entri de manera més suau jugant amb la opacitat */
 @keyframes fade-in {
     from {
         opacity: 0;
@@ -59,6 +62,7 @@
     }
 }
 
+/* Estilització del contingut principal on es toba el contingut principal */
 section {
     padding: 30px;
     flex: 1 100%;
@@ -89,6 +93,7 @@ section ul {
     justify-content: space-around;
 }
 
+/* Text i imatges dels requadres */
 #receptes img,
 #consells img {
     display: block;
@@ -128,6 +133,7 @@ section li:hover {
     box-shadow: 0 0 0;
 }
 
+/* Disposició de les imatges de la galeria */
 .imatges_galeria {
     display: flex;
     flex-wrap: wrap;
@@ -151,6 +157,8 @@ section li:hover {
     z-index: 1;
 }
 
+/* Visualització de la secció de penjar les teves imatges */
+/*Falta fer amb javaScript que hi hagi interacció a l'hora de penjar la imatge */
 form {
     display: flex;
     flex-direction: column;

@@ -1,3 +1,5 @@
+/* El contingut del menú principal i el desplegable */
+/* Estilització del menú principal */
 #menu {
   text-align: center;
   width: 80%;
@@ -38,7 +40,8 @@
   background-color: #d9a768; 
   box-shadow: 0 0 0;
 }
-
+ 
+/* 'Anul·lació' del menú adaptable més petit quan la pantalla és més gran a 500px */
 .sidebar {
   display: none;
 }
@@ -50,8 +53,10 @@
 .close-button {
   display: none;
 }
-
-@media (max-width: 1000px) {
+ 
+/* Visualització de com és mostraria els menus amb els seus botons i el component search
+quan l pantalla és inferior a 500ox */
+@media (max-width: 500px) {
   .toggle-button {
       display: inline-block;
       position: fixed;

@@ -1,3 +1,4 @@
+/* El contingut principal de la secció pastisseria */
 * {
     padding: 0;
     margin: 0;
@@ -11,6 +12,7 @@
     background-color: #f4deb3; 
 }
 
+/* El header on conté el títol i la petita descripció */
 #header_wrapper {
     opacity: 0.7;
     background-color: #8b4513; 
@@ -29,6 +31,7 @@
     order: 1;
 }
 
+/* Estilització del botó search */
 .search {
     display: flex;
     justify-content: center;
@@ -57,6 +60,7 @@
     margin-bottom: 2px;
 }
 
+/* Estilització del contingut principal on es troben les receptes amb una breu explicació i l'enllaç */
 .header_content h1 {
     font-size: 3em;
     font-weight: bolder;
@@ -97,25 +101,6 @@ section {
     display: block;
     margin: 10px 15px 20px 15px;
     background-color: #f4deb3; 
-}
-
-#seeMoreButton {
-    background-color: #ffa500;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#seeMoreButton:hover {
-    background-color: #ff8c00; 
-}
-
-#recommendations div {
-    margin: 0 auto;
-    padding: 10px;
 }
 
 .pastisseria>div,
@@ -169,6 +154,28 @@ p {
     padding: 5px 5px 15px 5px;
 }
 
+/* See more button però ara mateix el contingut està amagat amb overflow:scroll
+però en veritat hauria dé veure's quan apretes el botó LLegir Més */
+#seeMoreButton {
+    background-color: #ffa500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#seeMoreButton:hover {
+    background-color: #ff8c00; 
+}
+
+#recommendations div {
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Visualització de la secció de recomenacions */
 #right_components {
     flex: 1;
     order: 4;

@@ -19,7 +19,9 @@
                 <h1>Receptes</h1>
             </div>
         </header>
-
+        
+        /* Creació dels botons de tancar i obrir del menú adpatat per pantalles més petites */
+        /* Falta que es tanqui i el toggle-button desaparegi amb javaScript */
         <div id="menu">
             <div class="toggle-button">
                 <a href="#" class="button">
@@ -31,26 +33,32 @@
             <div class="close-button">
                 <i class="fa fa-close"></i>
             </div>
+
+            /* Menú adaptat per quan la pantalla és més petita */
             <div id="left-sidebar" class="sidebar">
                 <ul>
-                    <li><a href="../main/index.html">Inici</a></li>
-                    <li><a href="../main/index.html#receptes">Receptes</a></li>
-                    <li><a href="../main/index.html#consells">Trucs i Consells</a></li>
-                    <li><a href="../main/index.html#galeria">Galeria</a></li>
-                    <li><a href="../main/index.html#enllacos">Enllaços d'Interès</a></li>
+                    <li><a href="/main/index.html">Inici</a></li>
+                    <li><a href="/main/index.html#receptes">Receptes</a></li>
+                    <li><a href="/main/index.html#consells">Trucs i Consells</a></li>
+                    <li><a href="/main/index.html#galeria">Galeria</a></li>
+                    <li><a href="/main/index.html#enllacos">Enllaços d'Interès</a></li>
                 </ul>
             </div>
+
+            /* Menú principal */
             <nav class="navbar-links">
                 <ul>
-                    <li><a href="../main/index.html">Inici</a></li>
-                    <li><a href="../main/index.html#receptes">Receptes</a></li>
-                    <li><a href="../main/index.html#consells">Trucs i Consells</a></li>
-                    <li><a href="../main/index.html#galeria">Galeria</a></li>
-                    <li><a href="../main/index.html#enllacos">Enllaços d'Interès</a></li>
+                    <li><a href="/main/index.html">Inici</a></li>
+                    <li><a href="/main/index.html#receptes">Receptes</a></li>
+                    <li><a href="/main/index.html#consells">Trucs i Consells</a></li>
+                    <li><a href="/main/index.html#galeria">Galeria</a></li>
+                    <li><a href="/main/index.html#enllacos">Enllaços d'Interès</a></li>
                 </ul>
             </nav>
         </div>
+
         <div id="right_components">
+            /* Component per cercar les receptes i no hanar buscant un per un */
             <div class="search">
                 <form action="#">
                     <input type="text" placeholder=" Busca receptes" name="search">
@@ -60,6 +68,7 @@
                 </form>
             </div>
 
+            /* Aside on es troben les receptes més recomenades */
             <aside id="recommendations">
                 <h2>Recommendations</h2>
                 <div>
@@ -82,7 +91,9 @@
                 </div>
             </aside>
         </div>
+        
         <section id="receptes">
+            /* Secció on es troben les receptes que són pastissos */
             <section id="pastisseria_categoria">
                 <h2>Pastissos i Magdalenes</h2>
                 <div class="pastisseria">
@@ -125,6 +136,8 @@
                     <button id="seeMoreButton">See More</button>
                 </div>
             </section>
+
+            /* Secció on es troben les receptes de galetes */
             <section id="galetes_categoria">
                 <h2>Pastes i Galetes</h2>
                 <div class="galetes">
@@ -171,6 +184,8 @@
                     <button id="seeMoreButton">See More</button>
                 </div>
             </section>
+
+            /* Secció on es troben les receptes dels pans normals com els dolços */
             <section id="pans_categoria">
                 <h2>Pans artesans</h2>
                 <div class="pans">
@@ -215,6 +230,8 @@
                     <button id="seeMoreButton">See More</button>
                 </div>
             </section>
+
+            /* Secció on es troben les receptes típiques per festes com Nadal, Halloween o Pascua */
             <section id="festes_categoria">
                 <h2>Festes</h2>
                 <div class="festes">
@@ -262,6 +279,8 @@
                 </div>
             </section>
         </section>
+
+        /* Footer amb les dades de contacte i xarxes socials */
         <footer>
             <ul id="xarxes_socials">
                 <li><a href="#" class="fa fa-facebook"></a></li>
