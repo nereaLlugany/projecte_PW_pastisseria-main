@@ -1,0 +1,175 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-flow: row wrap;
+    display: flex;
+    background-color: #f4deb3; 
+}
+
+#header_wrapper {
+    opacity: 0.7;
+    background-color: #8b4513; 
+    background-image: url("imatges/sweet-pastry-assortment-top-view.jpg");
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 100px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px 2px black;
+    color: white;
+    flex: 1 100%;
+    order: 1;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px 20px;
+}
+
+.search input[type=text] {
+    width: auto;
+    height: 48px;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+.search button {
+    background-color: #35b6e1;
+    color: #f5f5f5;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.search button i {
+    margin-bottom: 2px;
+}
+
+.header_content h1 {
+    font-size: 3em;
+    font-weight: bolder;
+    padding-bottom: 40px;
+    opacity: 1;
+    font-family: "Lucida Handwriting", cursive;
+}
+
+.image_container {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    text-align: center;
+    margin: 10px 40px;
+}
+
+.image_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+section {
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    flex: 2.9;
+    order: 3;
+}
+
+.pastisseria,
+.galetes,
+.pans,
+.festes {
+    overflow: scroll;
+    height: 250px;
+    display: block;
+    margin: 10px 15px 20px 15px;
+    background-color: #f4deb3; 
+}
+
+#seeMoreButton {
+    background-color: #ffa500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#seeMoreButton:hover {
+    background-color: #ff8c00; 
+}
+
+#recommendations div {
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.pastisseria>div,
+.pans>div,
+.galetes>div,
+.festes>div {
+    display: inline-block;
+    padding: 10px;
+    vertical-align: top;
+    text-align: center;
+    width: 175px;
+    margin: 20px 2px;
+    height: 260px;
+}
+
+.pastisseria>div:nth-child(odd),
+.pans>div:nth-child(odd),
+.galetes>div:nth-child(odd),
+.festes>div:nth-child(odd) {
+    background-color: #e7be72; 
+    border-radius: 5px;
+}
+
+.pastisseria>div:nth-child(even),
+.pans>div:nth-child(even),
+.galetes>div:nth-child(even),
+.festes>div:nth-child(even) {
+    background-color: #cd853f; 
+    border-radius: 5px;
+}
+
+#recommendations {
+    margin: 0 20px;
+    padding: 10px;
+    background-color: #D2691E;
+}
+
+div>a {
+    background-color: #ffa07a; 
+    padding: 5px;
+    color:#8b4513;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+div>li:hover {
+    background-color: #ffdead;
+}
+
+p {
+    padding: 5px 5px 15px 5px;
+}
+
+#right_components {
+    flex: 1;
+    order: 4;
+}
