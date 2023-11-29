@@ -1,3 +1,4 @@
+/* El contingut principal de la secció consells i trucs */
 * {
     padding: 0;
     margin: 0;
@@ -10,6 +11,7 @@
     background-color: #FFDAB9;
 }
 
+/* El header on conté el títol */
 #header_wrapper {
     opacity: 0.7;
     background-color: #8B4513;
@@ -40,6 +42,7 @@
     opacity: 1;
 }
 
+/* Estilització del menú hover/dropdown */
 .dropdow_nav {
     position: relative;
     display: flex;
@@ -85,6 +88,7 @@
     animation-duration: 0.5s;
   }
   
+  /* Animació per simular el dropdown menu */
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -125,6 +129,7 @@
     background-color: #FFDAB9;
 }
 
+/* Estilització del contingut principal amb els consells/trucs */
 .carousel-container {
     display: flex;
     overflow: hidden;
@@ -224,8 +229,8 @@
     transform: scale(1.6);
 }
 
-
-@media (max-width: 1000px) {
+/* Visualització de com és mostraria el menu i les fletxes a una pantalla inferior a 550px */
+@media (max-width: 550px) {
     section {
         order: 4;
     }

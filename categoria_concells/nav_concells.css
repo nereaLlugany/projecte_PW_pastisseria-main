@@ -1,3 +1,5 @@
+/* El contingut del menú de navegació de la secció de pastisseria */
+/* Estilització del menú principal */
 * {
     padding: 0;
     margin: 0;
@@ -47,6 +49,7 @@
     box-shadow: 0 0 0;
 }
 
+/* 'Anul·lació' del menú adaptable més petit quan la pantalla és més gran a 500px */
 .sidebar {
     display: none;
 }
@@ -59,7 +62,9 @@
     display: none;
 }
 
-@media (max-width: 1000px) {
+/* Visualització de com és mostraria els menus amb els seus botons i el component search
+quan l pantalla és inferior a 550px */
+@media (max-width: 550px) {
 
     .toggle-button {
         display: inline-block;

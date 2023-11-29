@@ -55,8 +55,8 @@
 }
  
 /* Visualització de com és mostraria els menus amb els seus botons i el component search
-quan l pantalla és inferior a 500ox */
-@media (max-width: 500px) {
+quan l pantalla és inferior a 550px */
+@media (max-width: 550px) {
   .toggle-button {
       display: inline-block;
       position: fixed;
@@ -140,15 +140,5 @@ quan l pantalla és inferior a 500ox */
 
   section {
       margin-top: 20px;
-  }
-
-  .search input[type=text] {
-      width: 180px;
-      height: 38px;
-  }
-
-  .search button {
-      padding: 5px 10px;
-      margin-top: 10px;
   }
 }
