@@ -84,7 +84,7 @@ quan l pantalla és inferior a 550px */
       background-color: #9e7250; 
       overflow-x: hidden;
       transition: 0.5s;
-      transform: translateX(-100px);
+      transform: translateX(-50px);
       z-index: 1;
   }
 
