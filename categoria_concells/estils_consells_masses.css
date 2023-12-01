@@ -1,4 +1,3 @@
-/* El contingut principal de la secció consells i trucs */
 * {
     padding: 0;
     margin: 0;
@@ -11,7 +10,6 @@
     background-color: #FFDAB9;
 }
 
-/* El header on conté el títol */
 #header_wrapper {
     opacity: 0.7;
     background-color: #8B4513;
@@ -42,7 +40,6 @@
     opacity: 1;
 }
 
-/* Estilització del menú hover/dropdown */
 .dropdow_nav {
     position: relative;
     display: flex;
@@ -87,8 +84,7 @@
     animation-name: fadeIn;
     animation-duration: 0.5s;
   }
-
-  /* Animació per simular el dropdown menu */  
+  
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -132,9 +128,9 @@
 /* Estilització del contingut principal amb els consells/trucs */
 .carousel-container {
     display: flex;
-    overflow: hidden;
-    width: 800px;
-    height: 900px;
+    width: 80%;
+    max-width: 800px;
+    height: auto;
     margin: 0 auto;
     order: 4;
     text-align: center;
@@ -146,11 +142,16 @@
     flex-direction: column;
     align-items: center;
     transition: transform 0.5s ease-in-out;
-  }
+    width: 70%;
+    max-width: 750px;
+    height: auto;
+    margin: 0 auto;
+}
 
 .arrow {
     position: absolute;
-    top: 445px;
+    top: 85%;
+    transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     padding: 10px 15px;
@@ -169,20 +170,21 @@
 }
 
 .prev {
-    left: 285px;
+    left: 25%;
 }
 
 .next {
-    right: 255px;
+    right: 23%;
 }
 
 .carousel-slide #img_and_p {
     background-color: white;
     box-shadow: 2px 2px 5px black;
-    width: 700px;
-    height: 700px;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
     margin: 0 60px 50px 80px;
-    padding-top: 40px;
+    padding: 20px;
     position: relative;
     border-radius: 20px;
     font-family: "Lucida Handwriting";
@@ -191,7 +193,8 @@
 .carousel-slide h2 {
     margin: 80px 0;
     border-bottom: dashed;
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
     margin: 0 60px 50px 80px;
     padding: 20px 0px;
     font-family: 'Montserrat', sans-serif;
@@ -205,14 +208,16 @@
 
 .carousel-slide p {
     padding: 5px 5px 15px 5px;
-    width: 500px;
+    width: 100%;
+    max-width: 400px;
     margin: 0 auto;
     font-size: 0.75em;
 }
 
 .carousel-slide .image_container {
-    width: 375px;
-    height: 375px;
+    width: 100%;
+    max-width: 475px;
+    height: auto;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -229,8 +234,8 @@
     transform: scale(1.6);
 }
 
-/* Visualització de com és mostraria el menu i les fletxes a una pantalla inferior a 550px */
-@media (max-width: 550px) {
+
+@media (max-width: 1000px) {
     section {
         order: 4;
     }
@@ -246,15 +251,10 @@
     .dropdownButton {
         margin-top: 50px;
     }
-    .prev {
-        left: 65px;
+    .prev{
+        left: 5%;
     }
-
-    .arrow {
-        top: 450px;
-    }
-
-    .next {
-        right: 45px;
+    .next{
+        right: 3%;
     }
 }

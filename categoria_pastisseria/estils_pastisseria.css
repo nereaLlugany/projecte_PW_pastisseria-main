@@ -180,3 +180,9 @@ però en veritat hauria dé veure's quan apretes el botó LLegir Més */
     flex: 1;
     order: 4;
 }
+
+@media (max-width: 550px) {
+    #right_components{
+        order: 3;
+    }
+}
