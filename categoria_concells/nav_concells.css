@@ -67,7 +67,7 @@ quan l pantalla és inferior a 550px */
 @media (max-width: 550px) {
 
     .toggle-button {
-        display: inline-block;
+        display: none;
         position: fixed;
         top: 8px;
         left: 0;
@@ -96,7 +96,8 @@ quan l pantalla és inferior a 550px */
         background-color: #9e7250; 
         overflow-x: hidden;
         transition: 0.5s;
-        transform: translateX(-5px);
+        transform: translateX(-300px);
+        transition: transform 0.3s ease-in-out;
         z-index: 1;
     }
 

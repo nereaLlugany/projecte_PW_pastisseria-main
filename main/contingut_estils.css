@@ -46,7 +46,6 @@
 }
 
 .header_content {
-    width: 80%;
     padding: 0 100px;
     opacity: 1;
     animation: fade-in 1s ease-in-out;

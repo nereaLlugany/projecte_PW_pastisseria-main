@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="estils_pastisseria.css">
     <link rel="stylesheet" href="nav_estils.css">
     <link rel="stylesheet" href="../main/footer_main_estils.css">
-    <title>Recipes</title>
+    <script src ="pastisseria_script.js"></script>
 </head>
 
 <body>
@@ -61,7 +61,7 @@
             <!-- Component per cercar les receptes i no hanar buscant un per un -->
             <div class="search">
                 <form action="#">
-                    <input type="text" placeholder=" Busca receptes" name="search">
+                    <input type="text" placeholder=" Busca receptes" name="search" id="searchInput">
                     <button>
                         <i class="fa fa-search" style="font-size: 25px;"></i>
                     </button>
@@ -93,6 +93,7 @@
         </div>
         
         <section id="receptes">
+            <section class="searched-recipies"></section>
             <!-- Secció on es troben les receptes que són pastissos -->
             <section id="pastisseria_categoria">
                 <h2>Pastissos i Magdalenes</h2>
@@ -133,8 +134,8 @@
                         <p>Farina, espècies, ous, aigua, oli, sucre</p>
                         <a href="https://healthynibblesandbits.com/fat-goh-fa-gao-prosperity-cake/">Llegir més</a>
                     </div>
-                    <button id="seeMoreButton">See More</button>
                 </div>
+                <button id="seeMoreButton" class="cake">See More</button>
             </section>
 
             <!-- Secció on es troben les receptes de galetes -->
@@ -181,8 +182,8 @@
                         <a href="https://tasty.co/recipe/tasty-101-ultimate-brown-butter-chocolate-chip-cookies">Llegir
                             més</a>
                     </div>
-                    <button id="seeMoreButton">See More</button>
                 </div>
+                <button id="seeMoreButton" class="biscuits">See More</button>
             </section>
 
             <!-- Secció on es troben les receptes dels pans normals com els dolços -->
@@ -227,8 +228,8 @@
                         <p>Llevat, sucre, sal, farina, oli</p>
                         <a href="https://tastesbetterfromscratch.com/bread-recipe/">Llegir més</a>
                     </div>
-                    <button id="seeMoreButton">See More</button>
                 </div>
+                <button id="seeMoreButton" class="bread">See More</button>
             </section>
 
             <!-- Secció on es troben les receptes típiques per festes com Nadal, Halloween o Pascua -->
@@ -275,8 +276,8 @@
                             href="https://thermomix-tarragona.es/vanessa-villegas-terrin/masas-panes-reposteria/receta-thermomix-pan-de-sant-jordi-cataluna/">Llegir
                             més</a>
                     </div>
-                    <button id="seeMoreButton">See More</button>
                 </div>
+                <button id="seeMoreButton" class="special">See More</button>
             </section>
         </section>
 

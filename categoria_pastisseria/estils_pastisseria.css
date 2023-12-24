@@ -96,17 +96,17 @@ section {
 .galetes,
 .pans,
 .festes {
-    overflow: scroll;
-    height: 250px;
+    overflow: hidden;
+    height: 310px;
     display: block;
-    margin: 10px 15px 20px 15px;
+    margin: 10px 15px 10px 15px;
     background-color: #f4deb3; 
 }
 
 .pastisseria>div,
 .pans>div,
 .galetes>div,
-.festes>div {
+.festes>div, .searched-recipies>div{
     display: inline-block;
     padding: 10px;
     vertical-align: top;
@@ -116,10 +116,11 @@ section {
     height: 260px;
 }
 
+
 .pastisseria>div:nth-child(odd),
 .pans>div:nth-child(odd),
 .galetes>div:nth-child(odd),
-.festes>div:nth-child(odd) {
+.festes>div:nth-child(odd), .searched-recipies>div:nth-child(odd){
     background-color: #e7be72; 
     border-radius: 5px;
 }
@@ -127,7 +128,7 @@ section {
 .pastisseria>div:nth-child(even),
 .pans>div:nth-child(even),
 .galetes>div:nth-child(even),
-.festes>div:nth-child(even) {
+.festes>div:nth-child(even), .searched-recipies>div:nth-child(even) {
     background-color: #cd853f; 
     border-radius: 5px;
 }
@@ -164,6 +165,7 @@ però en veritat hauria dé veure's quan apretes el botó LLegir Més */
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 #seeMoreButton:hover {
