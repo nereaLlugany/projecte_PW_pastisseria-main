@@ -1,36 +1,53 @@
-// Funció que afageix una imatge a la galeria
-function penjarImatge() {
-    // Obté la ruta de l'arxiu d'imatge des de l'element amb l'id 'imatge'
-    let filePath = document.getElementById('imatge').value;
+// Funció per pujar una imatge i afegir-la a una galeria d'imatges
+function penjarImatge(event) {
+    event.preventDefault(); 
+    // Obtenir el primer arxiu seleccionat a través de l'element amb ID 'imatge'
+    let fileInput = document.getElementById('imatge').files[0];
 
-    // Crea un nou element d'imatge i assigna la ruta del fitxer obtinguda
-    let newImage = document.createElement('img');
-    newImage.src = filePath;
+    // Comprovar si s'ha seleccionat un arxiu
+    if (fileInput) {
+        // Inicialitzar un FileReader per llegir el contingut de l'arxiu
+        let reader = new FileReader();
 
-    // Obté tots els elements 'img' dins de l'element amb la classe '.imatges_galeria'
-    let galleryImages = document.querySelectorAll('.imatges_galeria img');
+        // Funció que s'executa quan la lectura de l'arxiu és completa
+        reader.onload = function (event) {
+            // Crear un element img per a la nova imatge i assignar-li la font de la imatge llegida
+            let newImage = document.createElement('img');
+            newImage.src = event.target.result;
 
-    // Crea una llista de les rutes de les imatges ja presents a la galeria
-    let imageSources = [];
-    galleryImages.forEach(image => {
-        imageSources.push(image.src);
-    });
+            // Obtindre totes les imatges de la galeria d'imatges
+            let galleryImages = document.querySelectorAll('.imatges_galeria img');
 
-    // Afegeix la nova ruta al final de la llista de rutes d'imatges
-    imageSources.push(filePath);
+            // Array per emmagatzemar les fonts de les imatges actuals
+            let imageSources = [];
 
-    // Obté l'element que conté la galeria d'imatges
-    let gallery = document.querySelector('.imatges_galeria');
+            // Recórrer les imatges existents i afegir les seves fonts a l'array imageSources
+            galleryImages.forEach(image => {
+                imageSources.push(image.src);
+            });
 
-    // Esborra tot el contingut actual de la galeria
-    gallery.innerHTML = '';
+            // Afegir la nova font de la imatge a l'array imageSources
+            imageSources.push(event.target.result);
 
-    // Afegeix tots els elements 'img' amb les rutes actualitzades a la galeria
-    imageSources.forEach(src => {
-        let imgElement = document.createElement('img');
-        imgElement.src = src;
-        gallery.appendChild(imgElement);
-    });
+            // Seleccionar l'element amb la classe '.imatges_galeria'
+            let gallery = document.querySelector('.imatges_galeria');
+
+            // Buidar el contingut actual de la galeria
+            gallery.innerHTML = '';
+
+            // Afegir les imatges a la galeria
+            imageSources.forEach(src => {
+                let imgElement = document.createElement('img');
+                imgElement.src = src;
+                gallery.appendChild(imgElement);
+            });
+        };
+
+        // Llegir l'arxiu com a URL de dades
+        reader.readAsDataURL(fileInput);
+    } else {
+        alert("No s'ha seleccionat ninguna imatge");
+    }
 }
 
 window.onload = function() {
