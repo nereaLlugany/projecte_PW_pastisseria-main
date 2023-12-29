@@ -1,6 +1,7 @@
 // Funció per pujar una imatge i afegir-la a una galeria d'imatges
 function penjarImatge(evt) {
     evt.preventDefault(); 
+    console.log("Event default behavior prevented");
     // Obtenir el primer arxiu seleccionat a través de l'element amb ID 'imatge'
     let fileInput = document.getElementById('imatge').files[0];
 
@@ -56,7 +57,8 @@ window.onload = function() {
     let closeButton = document.querySelector('.close-button');
 
     // Gestor d'esdeveniments per al botó de toggle del navegador lateral
-    toggleButton.addEventListener('click', function() {
+    toggleButton.addEventListener('click', function(event) {
+        event.preventDefault;
         // Comprova l'estat actual del navegador lateral i depenent del resultat el mostre o no
         //També mostre o no el botó de tancament
         if (sidebar.style.transform === 'translateX(-300px)') {
@@ -71,13 +73,12 @@ window.onload = function() {
     });
 
     // Gestor d'esdeveniments per al botó de tancament del navegador lateral
-    closeButton.addEventListener('click', function() {
+    closeButton.addEventListener('click', function(event) {
+        event.preventDefault;
         sidebar.style.transform = 'translateX(-300px)';
         closeButton.style.display = 'none';
     });
 
     // Assigna la funció 'penjarImatge()' a l'esdeveniment de clic al botó amb l'id 'penjar'
-    document.getElementById('penjar').addEventListener('click', function (){
-        penjarImatge(evt)
-    });
+    document.getElementById('penjar').addEventListener('click', penjarImatge);
 }

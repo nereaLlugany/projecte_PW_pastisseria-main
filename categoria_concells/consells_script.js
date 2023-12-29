@@ -4,7 +4,8 @@ window.onload = function(){
     let closeButton = document.querySelector('.close-button');
 
     // Gestiona els esdeveniments per al botó de toggle del navegador lateral
-    toggleButton.addEventListener('click', function() {
+    toggleButton.addEventListener('click', function(event) {
+        event.preventDefault;
         // Comprova l'estat actual del navegador lateral i depenent del resultat el mostre o no
         //També mostre o no el botó de tancament
         if (sidebar.style.transform === 'translateX(-300px)') {
@@ -16,6 +17,13 @@ window.onload = function(){
             sidebar.style.transform = 'translateX(-300px)';
             closeButton.style.display = 'none';
           }
+    });
+
+    // Gestor d'esdeveniments per al botó de tancament del navegador lateral
+    closeButton.addEventListener('click', function(event) {
+        event.preventDefault;
+        sidebar.style.transform = 'translateX(-300px)';
+        closeButton.style.display = 'none';
     });
 
     let carousel = document.querySelector('.carousel');
