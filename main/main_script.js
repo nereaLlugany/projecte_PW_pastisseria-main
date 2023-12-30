@@ -61,7 +61,7 @@ window.onload = function() {
         let currentState = sidebar.style.transform;
 
         if (currentState === 'translateX(-300px)' || currentState === '') {
-            sidebar.style.transform = 'translateX(-48px)';
+            sidebar.style.transform = 'translateX(-55px)';
             setTimeout(function() {
                 closeButton.style.display = 'inline-block';
             }, 200);
