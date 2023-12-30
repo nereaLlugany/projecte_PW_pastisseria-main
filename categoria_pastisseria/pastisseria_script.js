@@ -22,23 +22,15 @@ function seeMoreClicked(event) {
     }
 }
 
-//Funció per mirar si la recepte ja existeix
-function recipeTitleExists(container, title) {
-    let recipeTitles = container.querySelectorAll('h4');
-    for (let i = 0; i < recipeTitles.length; i++) {
-        if (recipeTitles[i].textContent.trim().toLowerCase() === title.toLowerCase()) {
-            return true; 
-        }
-    }
-    return false; 
-}
-
 // Funció que gestiona la cerca de receptes
 function search(event) {
     event.preventDefault();
     // Obté el valor de la recepte cercada i el converteix a minúscules
     let searchInput = document.getElementById('searchInput').value.trim().toLowerCase();
     let searchedContainer = document.querySelector('.searched-recipies');
+
+    // Esborra tot el contingut per no repetir receptes
+    searchedContainer.innerHTML = '';
 
     // Obté tots els títols de receptes
     let recipeTitles = document.querySelectorAll('h4');
@@ -52,16 +44,12 @@ function search(event) {
     for (let i = 0; i < recipeTitles.length; i++) {
         if (recipeTitles[i].textContent.trim().toLowerCase().includes(searchInput)) {
             let recipeContent = recipeTitles[i].parentElement;
-            if (!recipeTitleExists(searchedContainer, recipeTitles[i].textContent.trim())) {
-                matchedRecipes.push(recipeContent);
-            }
+            matchedRecipes.push(recipeContent);
         }
     }
 
     // Obté les seccions de categories de receptes
     let recipeSections = document.querySelectorAll('#pastisseria_categoria, #galetes_categoria, #pans_categoria, #festes_categoria');
-
-    searchedContainer.innerHTML = '';
 
     // Gestiona els resultats de la cerca per mostrar els elements que coincideixen amb la cerca
     if (searchInput === '') {
@@ -91,18 +79,18 @@ function search(event) {
     previousSearch = searchInput;
 }
 
-window.onload = function() {
+window.onload = function () {
     let toggleButton = document.querySelector('.toggle-button');
     let sidebar = document.querySelector('.sidebar');
     let closeButton = document.querySelector('.close-button');
 
     // Gestiona els esdeveniments per al botó de toggle del navegador lateral
-    toggleButton.addEventListener('click', function(event) {
+    toggleButton.addEventListener('click', function (event) {
         let currentState = sidebar.style.transform;
 
         if (currentState === 'translateX(-300px)' || currentState === '') {
             sidebar.style.transform = 'translateX(-5px)';
-            setTimeout(function() {
+            setTimeout(function () {
                 closeButton.style.display = 'inline-block';
             }, 200);
         } else {
@@ -112,7 +100,7 @@ window.onload = function() {
     });
 
     // Gestor d'esdeveniments per al botó de tancament del navegador lateral
-    closeButton.addEventListener('click', function(event) {
+    closeButton.addEventListener('click', function (event) {
         event.preventDefault;
         sidebar.style.transform = 'translateX(-300px)';
         closeButton.style.display = 'none';
@@ -129,11 +117,11 @@ window.onload = function() {
     }
 
     // Gestiona la cerca quan es fa clic al botó de cerca o es prem Enter des del camp de cerca
-    searchButton.addEventListener('click', function(event) {
+    searchButton.addEventListener('click', function (event) {
         search(event);
     });
 
-    searchInput.addEventListener('keydown', function(event) {
+    searchInput.addEventListener('keydown', function (event) {
         if (event.key === 'Enter') {
             search(event);
         }
