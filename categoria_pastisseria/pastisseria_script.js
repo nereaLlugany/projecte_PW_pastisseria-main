@@ -98,18 +98,17 @@ window.onload = function() {
 
     // Gestiona els esdeveniments per al botó de toggle del navegador lateral
     toggleButton.addEventListener('click', function(event) {
-        event.preventDefault;
-        // Comprova l'estat actual del navegador lateral i depenent del resultat el mostre o no
-        //També mostre o no el botó de tancament
-        if (sidebar.style.transform === 'translateX(-300px)') {
+        let currentState = sidebar.style.transform;
+
+        if (currentState === 'translateX(-300px)' || currentState === '') {
             sidebar.style.transform = 'translateX(-5px)';
             setTimeout(function() {
                 closeButton.style.display = 'inline-block';
             }, 200);
-          } else {
+        } else {
             sidebar.style.transform = 'translateX(-300px)';
             closeButton.style.display = 'none';
-          }
+        }
     });
 
     // Gestor d'esdeveniments per al botó de tancament del navegador lateral

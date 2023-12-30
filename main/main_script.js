@@ -58,11 +58,10 @@ window.onload = function() {
 
     // Gestor d'esdeveniments per al botó de toggle del navegador lateral
     toggleButton.addEventListener('click', function(event) {
-        event.preventDefault;
-        // Comprova l'estat actual del navegador lateral i depenent del resultat el mostre o no
-        //També mostre o no el botó de tancament
-        if (sidebar.style.transform === 'translateX(-300px)') {
-            sidebar.style.transform = 'translateX(-50px)';
+        let currentState = sidebar.style.transform;
+
+        if (currentState === 'translateX(-300px)' || currentState === '') {
+            sidebar.style.transform = 'translateX(-5px)';
             setTimeout(function() {
                 closeButton.style.display = 'inline-block';
             }, 200);
